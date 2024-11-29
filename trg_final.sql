@@ -4,9 +4,9 @@ AFTER INSERT, UPDATE, DELETE
 AS
 BEGIN
 DECLARE @Eid as int,
-		@Ename as varchar (30),
+		@Ename as varchar (50),
 		@sal as numeric 
-		@des as varachar (20)
+		@des as varachar (40)
 SELECT @Eid = EmpId, @Ename = EmplyeeName, @sal = Salary, @des = Designation FROM INSERTED 
 	
 	IF(EXISTS(SELECT * FROM INSERTED) AND EXISTS (SELECT * FROM DELETED))
